@@ -89,6 +89,7 @@ export const PipelineTableRow = ({
       <NextRun pipeline={pipeline} />
       <RunsCount pipeline={pipeline} />
       <PipelineTags pipeline={pipeline} />
+      <RenderView pipeline={pipeline} namespace={namespace} />
       <DeployedActions
         pipeline={pipeline}
         refetch={refetch}
@@ -98,4 +99,16 @@ export const PipelineTableRow = ({
       />
     </a>
   );
+};
+
+const RenderView = (props: { pipeline: IPipeline; namespace: string }) => {
+  const { pipeline, namespace } = props;
+  const pipelineLink = window.getHydratorUrl({
+    stateName: 'hydrator.relationships',
+    stateParams: {
+      namespace,
+      pipelineId: pipeline.name,
+    },
+  });
+  return <a href={pipelineLink}>View</a>;
 };

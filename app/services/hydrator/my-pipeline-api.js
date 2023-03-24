@@ -110,6 +110,12 @@ angular.module(PKG.name + '.services')
 
         // save schedule
         createSchedule: myHelpers.getConfig('PUT', 'REQUEST', pipelinePath + '/schedules/:scheduleId', false),
+        getSchedules: myHelpers.getConfig('GET', 'REQUEST', pipelinePath + '/schedules/?schedule-status=SCHEDULED', true),
+        getTriggeredList: myHelpers.getConfig(
+          'GET',
+          'REQUEST',
+          '/api/v3/namespaces/:namespace/schedules/trigger-type/program-status', true
+        ),
       }
     );
   });

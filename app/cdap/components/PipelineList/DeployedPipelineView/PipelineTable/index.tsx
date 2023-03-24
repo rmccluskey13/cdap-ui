@@ -90,6 +90,7 @@ const PipelineTableView: React.SFC<IProps> = ({ pipelines, search, onClear, refe
               <strong>{T.translate(`${PREFIX}.nextRun`)}</strong>
               <strong>{T.translate(`${PREFIX}.runs`)}</strong>
               <strong>{T.translate(`${PREFIX}.tags`)}</strong>
+              <strong>Relationships</strong>
               <strong />
             </div>
           </div>

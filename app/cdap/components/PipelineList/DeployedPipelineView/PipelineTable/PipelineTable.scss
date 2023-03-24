@@ -26,6 +26,7 @@ $runs-width: 120px;
 $status-width: 150px;
 $last-start-width: 200px;
 $next-run-width: 150px;
+$relationships-width: 110px;
 $action-width: 60px;
 
 .pipeline-list-table.grid-wrapper {
@@ -50,7 +51,7 @@ $action-width: 60px;
     }
 
     .grid-row {
-      grid-template-columns: 1fr $type-width $status-width $last-start-width $next-run-width $runs-width 1fr $action-width;
+      grid-template-columns: 1fr $type-width $status-width $last-start-width $next-run-width $runs-width 1fr $relationships-width $action-width;
 
       > div {
         padding-top: 5px;
